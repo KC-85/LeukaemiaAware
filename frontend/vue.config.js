@@ -1,8 +1,11 @@
 // vue.config.js
 module.exports = {
   devServer: {
-    allowedHosts: "all", // Allow all hostnames
-    host: "0.0.0.0", // Accept connections from any IP
-    port: 8080, // Port for your dev server
+    host: "0.0.0.0", // Allow connections from any IP
+    port: 8080, // Ensure it matches your IDE's port
+    allowedHosts: "all", // Allow all external hosts
+    client: {
+      webSocketURL: "wss://8080-kc85-pancancerawareap-kkvluprv1rt.ws.codeinstitute-ide.net/ws", // Use your HTTPS IDE WebSocket URL
+    },
   },
 };
