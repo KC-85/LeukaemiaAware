@@ -1,39 +1,44 @@
-<!-- src/views/Condition.vue -->
 <template>
-    <div v-if="loading" class="loading-spinner">
-      <Spinner />
-    </div>
-    <div v-else>
-      <h1>{{ data.name }}</h1>
-      <p>{{ data.description }}</p>
-      <button @click="animateCondition">Animate</button>
-    </div>
-  </template>
-  
-  <script>
-  import { useApi } from "../composables/useApi";
-  import { ref } from "vue";
-  import gsap from "../plugins/gsap";
-  
-  export default {
-    props: ["conditionId"],
-    setup(props) {
-      const { data, loading, fetchData } = useApi(`/nhs/conditions/${props.conditionId}`);
-      fetchData();
-  
-      const animateCondition = () => {
-        gsap.to(".condition", { opacity: 0, y: -50, duration: 1 });
-      };
-  
-      return { data, loading, animateCondition };
+  <div v-if="loading" class="loading-spinner">
+    <Spinner />
+  </div>
+  <div v-else class="condition">
+    <h1>{{ condition.name }}</h1>
+    <p>{{ condition.description }}</p>
+    <Button label="Back to Home" type="primary" @click="goBack" />
+  </div>
+</template>
+
+<script>
+import { mapState, mapActions } from "vuex";
+import Spinner from "../components/common/Spinner.vue";
+import Button from "../components/common/Button.vue";
+
+export default {
+  props: ["id"],
+  components: { Spinner, Button },
+  computed: {
+    ...mapState("nhs", ["condition"]),
+    loading() {
+      return !this.condition;
     },
-  };
-  </script>
-  
-  <style scoped>
-  .loading-spinner {
-    text-align: center;
-    margin-top: 50px;
-  }
-  </style>
-  
+  },
+  methods: {
+    ...mapActions("nhs", ["fetchConditionData"]),
+    goBack() {
+      this.$router.push("/");
+    },
+  },
+  created() {
+    this.fetchConditionData(this.id);
+  },
+};
+</script>
+
+<style scoped>
+.condition {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+</style>
