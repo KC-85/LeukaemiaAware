@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f6f8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Merriweather', serif;
+  color: #2c3e50;
+  margin-bottom: 16px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px;
+  }
+  
+  .col {
+    flex: 1;
+    padding: 8px;
+  }
+  
+  .col-6 {
+    flex: 0 0 50%;
+  }
+  
+  .col-4 {
+    flex: 0 0 33.3333%;
+  }
+  
+  @media (min-width: 768px) {
+    .col-6 {
+      flex: 0 0 100%;
+    }
+  }
+
+  .button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button--primary {
+    background-color: #2c3e50;
+    color: #fff;
+  }
+  
+  .button--primary:hover {
+    background-color: #243440;
+  }
+  
+  .button--secondary {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .button--secondary:hover {
+    background-color: #297cb7;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .u-margin-sm {
+    margin: 8px;
+  }
+  
+  .u-margin-md {
+    margin: 16px;
+  }
+  
+  .u-margin-lg {
+    margin: 24px;
+  }
+  
+  .u-padding-sm {
+    padding: 8px;
+  }
+  
+  .u-padding-md {
+    padding: 16px;
+  }
+  
+  .u-padding-lg {
+    padding: 24px;
+  }
+  
+  .u-text-center {
+    text-align: center;
+  }
+  
+  .u-text-primary {
+    color: #2c3e50;
+  }
+  
+  .u-text-secondary {
+    color: #3498db;
+  }
+  

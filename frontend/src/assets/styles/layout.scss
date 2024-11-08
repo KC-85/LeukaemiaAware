@@ -1,0 +1,37 @@
+// src/assets/styles/layout.scss
+
+@import "variables";
+@import "mixins";
+
+// Container
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+// Grid System
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -$spacing-sm;
+}
+
+.col {
+  flex: 1;
+  padding: $spacing-sm;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+}
+
+.col-4 {
+  flex: 0 0 33.3333%;
+}
+
+@include respond-to("md") {
+  .col-6 {
+    flex: 0 0 100%;
+  }
+}

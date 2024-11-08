@@ -1,0 +1,31 @@
+// src/assets/styles/mixins.scss
+
+// Responsive Breakpoints
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px
+);
+
+@mixin respond-to($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+// Flex Center Mixin
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Utility Spacing Mixins
+@mixin margin($size) {
+  margin: $size;
+}
+
+@mixin padding($size) {
+  padding: $size;
+}
