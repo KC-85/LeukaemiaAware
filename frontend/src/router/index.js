@@ -2,12 +2,12 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Profile from "../views/Profile.vue";
-import Condition from "../views/Condition.vue";
+import Research from "../views/Research.vue";
 
 const routes = [
-  { path: "/", name: "Home", component: Home },
+  { path: "/", name: "Home", component: Home }, // Default route
   { path: "/profile", name: "Profile", component: Profile },
-  { path: "/conditions/:conditionId", name: "Condition", component: Condition, props: true },
+  { path: "/research", name: "Research", component: Research },
 ];
 
 const router = createRouter({
