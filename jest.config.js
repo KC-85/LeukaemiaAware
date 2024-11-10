@@ -1,19 +1,19 @@
 module.exports = {
-  testEnvironment: "jsdom", // Simulates a browser-like environment
+  testEnvironment: "jsdom", // Use a browser-like environment
   transform: {
-    "^.+\\.vue$": "vue-jest", // Handles Vue single-file components
-    "^.+\\.js$": "babel-jest", // Handles JavaScript files
+    "^.+\\.vue$": "vue-jest", // Transform Vue SFCs
+    "^.+\\.js$": "babel-jest", // Transform modern JavaScript
   },
-  moduleFileExtensions: ["js", "json", "vue"], // Recognize these extensions
+  moduleFileExtensions: ["js", "json", "vue"], // Recognize .js, .json, .vue
   transformIgnorePatterns: [
-    "/node_modules/(?!some-esm-package|another-esm-library)/", // Replace with actual dependency names
-  ],  
-  setupFilesAfterEnv: ["@testing-library/jest-dom"], // Custom matchers for DOM
-  collectCoverage: true, // Generate coverage reports
-  collectCoverageFrom: [
-    "src/**/*.{js,vue}", // Include JS and Vue files in coverage
-    "!src/main.js", // Exclude the entry point file
-    "!**/node_modules/**",
+    "/node_modules/", // Ignore dependencies unless explicitly needed
   ],
-  extensionsToTreatAsEsm: [".vue"], // Treat Vue files as ES modules
+  setupFilesAfterEnv: ["@testing-library/jest-dom"], // Add matchers for DOM testing
+  collectCoverage: true, // Enable code coverage
+  collectCoverageFrom: [
+    "src/**/*.{js,vue}", // Collect coverage for JS and Vue files
+    "!src/main.js", // Exclude the entry point
+    "!**/node_modules/**", // Exclude dependencies
+  ],
 };
+
