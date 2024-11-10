@@ -6,8 +6,8 @@ module.exports = {
   },
   moduleFileExtensions: ["js", "json", "vue"], // Recognize these extensions
   transformIgnorePatterns: [
-    "/node_modules/", // Don't transform node_modules by default
-  ],
+    "/node_modules/(?!some-esm-package|another-esm-library)/", // Replace with actual dependency names
+  ],  
   setupFilesAfterEnv: ["@testing-library/jest-dom"], // Custom matchers for DOM
   collectCoverage: true, // Generate coverage reports
   collectCoverageFrom: [
