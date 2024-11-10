@@ -15,12 +15,11 @@ describe("Header.vue", () => {
   it("renders navigation links", async () => {
     const wrapper = mount(Header, {
       global: {
-        plugins: [router], // Provide the router mock
+        plugins: [router], // Provide the router
       },
     });
 
-    // Wait for router to be ready
-    await router.isReady();
+    await router.isReady(); // Wait for router to initialize
 
     // Assert navigation links are rendered
     expect(wrapper.html()).toContain("Home");
@@ -28,4 +27,3 @@ describe("Header.vue", () => {
     expect(wrapper.html()).toContain("Research");
   });
 });
-
