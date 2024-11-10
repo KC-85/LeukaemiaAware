@@ -1,18 +1,22 @@
+const path = require("path");
+
 module.exports = {
-  testEnvironment: "jsdom", // Simulate a browser-like environment
+  testEnvironment: "jsdom",
   transform: {
-    "^.+\\.vue$": "vue-jest", // Handle Vue single-file components
-    "^.+\\.js$": "babel-jest", // Handle JavaScript files
+    "^.+\\.vue$": "vue-jest",
+    "^.+\\.js$": "babel-jest",
   },
-  moduleFileExtensions: ["js", "json", "vue"], // Recognize these file types
-  transformIgnorePatterns: [
-    "/node_modules/", // Ignore dependencies unless explicitly needed
-  ],
-  setupFilesAfterEnv: ["@testing-library/jest-dom"], // Add matchers for DOM testing
+  moduleFileExtensions: ["js", "json", "vue"],
+  transformIgnorePatterns: ["/node_modules/"],
+  setupFilesAfterEnv: ["@testing-library/jest-dom"],
   collectCoverage: true,
   collectCoverageFrom: [
-    "src/**/*.{js,vue}", // Include all JS and Vue files
-    "!src/main.js", // Exclude the entry point
-    "!**/node_modules/**", // Exclude dependencies
+    "src/**/*.{js,vue}",
+    "!src/main.js",
+    "!**/node_modules/**",
   ],
+  moduleNameMapper: {
+    "^vue$": path.resolve(__dirname, "node_modules/vue"), // Resolve Vue explicitly
+  },
 };
+
