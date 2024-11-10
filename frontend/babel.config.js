@@ -1,5 +1,6 @@
 module.exports = {
   presets: [
-    '@vue/cli-plugin-babel/preset'
-  ]
-}
+    "@babel/preset-env", // Modern JavaScript transpilation
+    "@vue/cli-plugin-babel/preset", // Vue-specific Babel transformations
+  ],
+};
