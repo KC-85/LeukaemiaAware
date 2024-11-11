@@ -1,0 +1,178 @@
+header {
+  background-color: #6a1b9a;
+  padding: 10px;
+  color: white;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+header nav a {
+  font-weight: bold;
+  color: white;
+}
+
+footer {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.home-page h1 {
+  color: #6a1b9a;
+  margin: 15px;
+}
+.home-page .cta-buttons {
+  margin-top: 15px;
+}
+.home-page .cta-buttons button {
+  padding: 10px;
+  background: #6a1b9a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+.home-page .cta-buttons button:hover {
+  background: #9b59b6;
+}
+
+.profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.profile-page h1 {
+  color: #6a1b9a;
+  margin-bottom: 15px;
+}
+.profile-page .profile-card {
+  background: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 80%;
+  max-width: 600px;
+}
+.profile-page .profile-card p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+.profile-page .profile-card button {
+  padding: 10px;
+  background: #6a1b9a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+.profile-page .profile-card button:hover {
+  background: #9b59b6;
+}
+
+.research-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.research-page h1 {
+  color: #6a1b9a;
+  margin-bottom: 15px;
+}
+.research-page .research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  width: 100%;
+  padding: 10px;
+}
+.research-page .research-grid .research-card {
+  background: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+.research-page .research-grid .research-card h2 {
+  color: #6a1b9a;
+  margin-bottom: 10px;
+}
+.research-page .research-grid .research-card p {
+  margin-bottom: 10px;
+}
+.research-page .research-grid .research-card button {
+  background: #6a1b9a;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.research-page .research-grid .research-card button:hover {
+  background: #9b59b6;
+}
+
+.condition-page {
+  padding: 15px;
+}
+.condition-page h1 {
+  color: #6a1b9a;
+  margin-bottom: 15px;
+}
+.condition-page .condition-details {
+  background: #f4f4f9;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.condition-page .condition-details h2 {
+  color: #6a1b9a;
+  margin-bottom: 10px;
+}
+.condition-page .condition-details p {
+  margin-bottom: 10px;
+}
+.condition-page .back-button {
+  margin-top: 15px;
+  background: #6a1b9a;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.condition-page .back-button:hover {
+  background: #9b59b6;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #6a1b9a;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #9b59b6;
+}
+
+/*# sourceMappingURL=style.css.map */
