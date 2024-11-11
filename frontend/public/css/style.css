@@ -1,178 +1,83 @@
-header {
-  background-color: #6a1b9a;
-  padding: 10px;
-  color: white;
+/* public/css/styles.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4; /* Light background for better contrast */
+  color: #333; /* Standard text color */
 }
-header nav {
+
+header {
+  background-color: #6a1b9a; /* Purple for Pancreatic Cancer Awareness */
+  color: white;
+  padding: 10px 20px;
+}
+
+header nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
 }
-header nav a {
-  font-weight: bold;
+
+header nav ul li a {
+  text-decoration: none;
   color: white;
+  font-size: 18px;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+  min-height: calc(100vh - 60px - 50px); /* Full height minus header and footer */
 }
 
 footer {
+  background-color: #6a1b9a; /* Same purple for consistency */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+button {
   background-color: #6a1b9a;
   color: white;
-  padding: 10px;
-  text-align: center;
-  margin-top: auto;
-}
-
-.home-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.home-page h1 {
-  color: #6a1b9a;
-  margin: 15px;
-}
-.home-page .cta-buttons {
-  margin-top: 15px;
-}
-.home-page .cta-buttons button {
-  padding: 10px;
-  background: #6a1b9a;
-  color: white;
   border: none;
-  border-radius: 8px;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease-in-out;
-}
-.home-page .cta-buttons button:hover {
-  background: #9b59b6;
+  font-size: 16px;
 }
 
-.profile-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.profile-page h1 {
-  color: #6a1b9a;
-  margin-bottom: 15px;
-}
-.profile-page .profile-card {
-  background: #f4f4f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  width: 80%;
-  max-width: 600px;
-}
-.profile-page .profile-card p {
-  margin-bottom: 15px;
-  font-size: 1rem;
-}
-.profile-page .profile-card button {
-  padding: 10px;
-  background: #6a1b9a;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
-}
-.profile-page .profile-card button:hover {
-  background: #9b59b6;
+button:hover {
+  background-color: #4a148c; /* Darker shade of purple */
 }
 
-.research-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+/* Full-screen adjustment */
+html, body, #root {
+  height: 100%;
 }
-.research-page h1 {
-  color: #6a1b9a;
-  margin-bottom: 15px;
-}
-.research-page .research-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 15px;
+
+#app, .container {
   width: 100%;
-  padding: 10px;
-}
-.research-page .research-grid .research-card {
-  background: #f4f4f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-}
-.research-page .research-grid .research-card h2 {
-  color: #6a1b9a;
-  margin-bottom: 10px;
-}
-.research-page .research-grid .research-card p {
-  margin-bottom: 10px;
-}
-.research-page .research-grid .research-card button {
-  background: #6a1b9a;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.research-page .research-grid .research-card button:hover {
-  background: #9b59b6;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.condition-page {
-  padding: 15px;
-}
-.condition-page h1 {
-  color: #6a1b9a;
-  margin-bottom: 15px;
-}
-.condition-page .condition-details {
-  background: #f4f4f9;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-.condition-page .condition-details h2 {
-  color: #6a1b9a;
-  margin-bottom: 10px;
-}
-.condition-page .condition-details p {
-  margin-bottom: 10px;
-}
-.condition-page .back-button {
-  margin-top: 15px;
-  background: #6a1b9a;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.condition-page .back-button:hover {
-  background: #9b59b6;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  color: #6a1b9a;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-a:hover {
-  color: #9b59b6;
-}
-
-/*# sourceMappingURL=style.css.map */
