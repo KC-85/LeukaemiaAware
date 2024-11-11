@@ -32,7 +32,7 @@ header nav ul {
 
 header nav ul li a {
   text-decoration: none;
-  color: #f4f4f4; /* Light color for better contrast with the purple background */
+  color: white; /* Ensures the links are white by default */
   font-size: 18px;
   font-weight: bold;
   padding: 5px 10px;
@@ -40,9 +40,13 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  color: #fff; /* Brighter white on hover for emphasis */
-  background-color: #4a148c; /* Slightly darker purple background for hover effect */
+  color: #f4f4f4; /* Slightly lighter color on hover */
+  background-color: #4a148c; /* Darker purple background on hover */
   border-radius: 5px;
+}
+
+header nav ul li a:visited {
+  color: white; /* Ensures visited links stay white */
 }
 
 main {
