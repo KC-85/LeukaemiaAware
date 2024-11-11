@@ -32,17 +32,17 @@ header nav ul {
 
 header nav ul li a {
   text-decoration: none;
-  color: white;
+  color: #f4f4f4; /* Light color for better contrast with the purple background */
   font-size: 18px;
-  font-weight: bold; /* Bold for better visibility */
-  padding: 5px 10px; /* Add some padding for clickable area */
-  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 header nav ul li a:hover {
-  color: #f4f4f4; /* Slightly lighter on hover */
-    background-color: #d6cee2; /* Darker purple background */
-    border-radius: 5px;
+  color: #fff; /* Brighter white on hover for emphasis */
+  background-color: #4a148c; /* Slightly darker purple background for hover effect */
+  border-radius: 5px;
 }
 
 main {
