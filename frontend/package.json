@@ -1,18 +1,20 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
+  "name": "pancancerawareapp-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for PanCancerAwareApp using jQuery and SASS",
   "private": true,
   "scripts": {
-    "start": "lite-server",
-    "build-css": "sass --watch scss/main.scss:css/style.css"
+    "start": "browser-sync start --server public --files 'public/**/*'",
+    "build-css": "sass --watch scss/main.scss:public/css/styles.css",
+    "clean-cache": "npx browsersync clear"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
     "jquery": "^3.7.1"
   },
   "devDependencies": {
-    "sass": "^1.80.6",
-    "lite-server": "^2.6.1"
+    "browser-sync": "^2.29.3",
+    "sass": "^1.80.6"
   },
   "browserslist": [
     "> 1%",
