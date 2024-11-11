@@ -41,7 +41,7 @@ header nav ul li a {
 
 header nav ul li a:hover {
   color: #f4f4f4; /* Slightly lighter on hover */
-    background-color: #4a148c; /* Darker purple background */
+    background-color: #05010b; /* Darker purple background */
     border-radius: 5px;
 }
 
@@ -90,4 +90,3 @@ html, body, #root {
   display: flex;
   flex-direction: column;
 }
-
