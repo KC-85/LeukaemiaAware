@@ -29,10 +29,15 @@ header nav ul li a {
   text-decoration: none;
   color: white;
   font-size: 18px;
+  font-weight: bold; /* Bold for better visibility */
+  padding: 5px 10px; /* Add some padding for clickable area */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
 }
 
 header nav ul li a:hover {
-  text-decoration: underline;
+  color: #f4f4f4; /* Slightly lighter on hover */
+    background-color: #4a148c; /* Darker purple background */
+    border-radius: 5px;
 }
 
 main {
