@@ -1,0 +1,27 @@
+@import "variables";
+@import "mixins";
+@import "header";
+@import "footer";
+@import "pages/home";
+@import "pages/profile";
+@import "pages/research";
+@import "pages/condition";
+
+// General Styles
+body {
+  font-family: Arial, sans-serif;
+  background-color: $secondary-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  @include transition(color);
+}
+
+a:hover {
+  color: $link-hover-color;
+}

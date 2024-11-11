@@ -1,0 +1,39 @@
+.condition-page {
+    padding: $margin;
+  
+    h1 {
+      color: $primary-color;
+      margin-bottom: $margin;
+    }
+  
+    .condition-details {
+      background: $secondary-color;
+      padding: $padding;
+      border-radius: $border-radius;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+      h2 {
+        color: $primary-color;
+        margin-bottom: $padding;
+      }
+  
+      p {
+        margin-bottom: $padding;
+      }
+    }
+  
+    .back-button {
+      margin-top: $margin;
+      background: $primary-color;
+      color: white;
+      border: none;
+      padding: $padding;
+      border-radius: $border-radius;
+      cursor: pointer;
+  
+      &:hover {
+        background: $link-hover-color;
+      }
+    }
+  }
+  

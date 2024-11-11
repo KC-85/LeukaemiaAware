@@ -1,0 +1,38 @@
+.profile-page {
+    @include center-flex;
+    flex-direction: column;
+  
+    h1 {
+      color: $primary-color;
+      margin-bottom: $margin;
+    }
+  
+    .profile-card {
+      background: $secondary-color;
+      border-radius: $border-radius;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: $padding;
+      width: 80%;
+      max-width: 600px;
+  
+      p {
+        margin-bottom: $margin;
+        font-size: 1rem;
+      }
+  
+      button {
+        padding: $padding;
+        background: $primary-color;
+        color: white;
+        border: none;
+        border-radius: $border-radius;
+        cursor: pointer;
+        @include transition(background);
+  
+        &:hover {
+          background: $link-hover-color;
+        }
+      }
+    }
+  }
+  

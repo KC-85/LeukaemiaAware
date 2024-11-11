@@ -1,0 +1,47 @@
+.research-page {
+    @include center-flex;
+    flex-direction: column;
+  
+    h1 {
+      color: $primary-color;
+      margin-bottom: $margin;
+    }
+  
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: $margin;
+      width: 100%;
+      padding: $padding;
+  
+      .research-card {
+        background: $secondary-color;
+        border-radius: $border-radius;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: $padding;
+  
+        h2 {
+          color: $primary-color;
+          margin-bottom: $padding;
+        }
+  
+        p {
+          margin-bottom: $padding;
+        }
+  
+        button {
+          background: $primary-color;
+          color: white;
+          border: none;
+          padding: $padding;
+          border-radius: $border-radius;
+          cursor: pointer;
+  
+          &:hover {
+            background: $link-hover-color;
+          }
+        }
+      }
+    }
+  }
+  
